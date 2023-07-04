@@ -1,0 +1,36 @@
+{% extends 'base.html' %}
+
+{% block head %}
+{% endblock %}
+
+{% block body %}
+<div id="calculations-container">
+    <div class="calculations-header">
+        <h2>Calculation</h2>
+    </div>
+    <div class="calculations-row">
+        <form action="/" method="POST">
+            <input type="number" name="first-number" id="first-number" step="any">
+            <label for="arithmetic-operator"></label>
+            <select id="arithmetic-operator" name="arithmetic-operator">
+              <option value="+">+</option>
+              <option value="-">-</option>
+              <option value="/">/</option>
+              <option value="*">*</option>
+            </select>
+            <input type="number" name="second-number" id="second-number" step="any">
+            <input type="submit" value="CALCULATE">
+        </form>
+    </div>
+    <div id="calculation-answer">
+
+        {% if result != None %}
+        <h2>{{ result }}</h2>
+        {% else %}
+        <h2></h2>
+        {% endif %}
+    </div>
+
+</div>
+
+{% endblock %}
