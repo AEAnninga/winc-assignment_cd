@@ -1,1 +1,1 @@
-![example workflow](https://github.com/AEAnninga/test_github_actions/actions/workflows/run-tests.yml/badge.svg?event=push)
+![calculator test](https://github.com/AEAnninga/winc_assignment_cd/actions/workflows/run-tests.yml/badge.svg?event=push)
