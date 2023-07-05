@@ -12,4 +12,7 @@ jobs:
           username: ${{ secrets.FLASK_CALCULATOR_USER }}
           password: ${{ secrets.FLASK_CALCULATOR_PASSPHRASE }}
 #           port: ${{ secrets.PORT }}
-          script: whoami
+          script: |
+            cd /home/flask_calculator_app/winc_assignment_cd
+            git pull
+                  
