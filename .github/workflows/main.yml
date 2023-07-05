@@ -1,0 +1,15 @@
+name: CD Deploy to VPS
+
+on: push
+jobs:
+  deploy:
+    runs-on: ubuntu-20.04
+    steps:
+      - name: Deploying to Digital Ocean Droplet
+        uses: appleboy/ssh-action@v0.1.10
+        with:
+          host: ${{ secrets.FLASK_CALCULATOR_HOST }}
+          username: ${{ secrets.FLASK_CALCULATOR_USER }}
+          password: ${{ secrets.FLASK_CALCULATOR_PASSPHRASE }}
+#           port: ${{ secrets.PORT }}
+          script: whoami
