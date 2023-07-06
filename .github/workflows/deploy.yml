@@ -18,7 +18,7 @@ jobs:
           username: ${{ secrets.FLASK_CALCULATOR_USER }}
 #           password: ${{ secrets.FLASK_CALCULATOR_PASSPHRASE }}
 #           passphrase: ${{ secrets.FLASK_CALCULATOR_PASSPHRASE }}
-          key: ${{ secrets.FLASK_CALCULATOR_FINGERPRINT }}
+          key: ${{ secrets.FLASK_CALCULATOR_KEY }}
 #           port: ${{ secrets.PORT }}
           script: |
             cd /home/flask_calculator_app/winc_assignment_cd
