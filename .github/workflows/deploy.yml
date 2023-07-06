@@ -1,4 +1,4 @@
-name: Deploy Flask App to VPS Digital Ocean
+name: Run Tests and Deploy Flask App to VPS Digital Ocean
 
 on: push
 
