@@ -3,7 +3,8 @@ name: Run Tests and Deploy Flask App to VPS Digital Ocean
 on: push
 
 jobs:
-  run-tests:
+  run_tests:
+    name: run tests with pytest
     runs-on: ubuntu-20.04
     steps:
       - name: Checkout repository
@@ -17,6 +18,8 @@ jobs:
       - name: Run tests
         run: pytest
   deploy:
+    name: Deploy Flask app to VPS
+    needs: run_tests
     runs-on: ubuntu-20.04
     steps:
       - name: Checkout repository
