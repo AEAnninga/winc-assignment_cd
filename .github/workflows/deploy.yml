@@ -12,7 +12,7 @@ jobs:
 #         with:
 #             ssh-private-key: ${{ secrets.CALCULATOR_KEY }}
       - name: Deploying to Digital Ocean Droplet
-        uses: appleboy/ssh-action@master
+        uses: appleboy/ssh-action@v0.1.10
         with:
           host: ${{ secrets.FLASK_CALCULATOR_HOST }}
           username: ${{ secrets.FLASK_CALCULATOR_USER }}
