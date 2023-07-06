@@ -8,7 +8,7 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v3
       - name: Deploying to Digital Ocean Droplet
-        uses: appleboy/ssh-action@v0.1.4
+        uses: appleboy/ssh-action@vmaster
         with:
           host: ${{ secrets.FLASK_CALCULATOR_HOST }}
           username: ${{ secrets.FLASK_CALCULATOR_USER }}
