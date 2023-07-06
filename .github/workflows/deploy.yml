@@ -12,7 +12,7 @@ jobs:
         with:
           host: ${{ secrets.FLASK_CALCULATOR_HOST }}
           username: ${{ secrets.FLASK_CALCULATOR_USER }}
-#           password: ${{ secrets.FLASK_CALCULATOR_PASSPHRASE }}
+          password: ${{ secrets.FLASK_CALCULATOR_PASSPHRASE }}
           passphrase: ${{ secrets.FLASK_CALCULATOR_PASSPHRASE }}
 #           port: ${{ secrets.PORT }}
           script: |
