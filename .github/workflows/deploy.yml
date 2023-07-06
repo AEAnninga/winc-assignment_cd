@@ -8,11 +8,12 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v3
       - name: Deploying to Digital Ocean Droplet
-        uses: appleboy/ssh-action@master
+        uses: appleboy/ssh-action@v0.1.4
         with:
           host: ${{ secrets.FLASK_CALCULATOR_HOST }}
           username: ${{ secrets.FLASK_CALCULATOR_USER }}
-          password: ${{ secrets.FLASK_CALCULATOR_PASSPHRASE }}
+#           password: ${{ secrets.FLASK_CALCULATOR_PASSPHRASE }}
+          passphrase: ${{ secrets.FLASK_CALCULATOR_PASSPHRASE }}
 #           port: ${{ secrets.PORT }}
           script: |
             cd /home/flask_calculator_app/winc_assignment_cd
