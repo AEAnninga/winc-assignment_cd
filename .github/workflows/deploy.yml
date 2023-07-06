@@ -1,25 +1,32 @@
 name: Deploy Flask App to VPS Digital Ocean
 
 on: push
+
 jobs:
+  run-tests:
+    runs-on: ubuntu-20.04
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+      - name: Setup Python 3.11
+        uses: actions/setup-python@v3
+        with:
+          python-version: '3.11.0'
+      - name: Install Dependencies
+        run: pip install -r requirements.txt
+      - name: Run tests
+        run: pytest
   deploy:
     runs-on: ubuntu-20.04
     steps:
       - name: Checkout repository
         uses: actions/checkout@v3
-#       - name: Deploy to VPS  
-#         uses: webfactory/ssh-agent@v0.7.0
-#         with:
-#             ssh-private-key: ${{ secrets.CALCULATOR_KEY }}
       - name: Deploying to Digital Ocean Droplet
         uses: appleboy/ssh-action@master
         with:
           host: ${{ secrets.FLASK_CALCULATOR_HOST }}
           username: ${{ secrets.FLASK_CALCULATOR_USER }}
-#           password: ${{ secrets.FLASK_CALCULATOR_PASSPHRASE }}
-#           passphrase: ${{ secrets.FLASK_CALCULATOR_PASSPHRASE }}
           key: ${{ secrets.FLASK_CALCULATOR_KEY }}
-#           port: ${{ secrets.PORT }}
           script: |
             cd /home/flask_calculator_app/winc_assignment_cd
             git pull
