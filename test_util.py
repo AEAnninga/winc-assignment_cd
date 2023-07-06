@@ -23,7 +23,7 @@ def test_calculate_input():
     assert calculate_input(3,0,'/') == "Cannot divide by zero!"
 
     assert calculate_input(-2,-3,'*') == float(6)
-    assert calculate_input(4,5,'*') == float(21)
+    assert calculate_input(4,5,'*') == float(20)
 
     assert calculate_input(None,None,'/') == "Something went wrong with the calculation!"
     assert calculate_input(None,5,'/') == "Something went wrong with the calculation!"
