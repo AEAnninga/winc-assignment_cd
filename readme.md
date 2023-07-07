@@ -5,7 +5,7 @@
 The web application itself is very basic, because that wasn’t the scope of this assignment. Just some simple arithmetic calculations. Adding new kind of calculations with corresponding tests should be very straightforward.
 For the CD pipeline I wanted a couple of things:
 
-##My own domain:
+## My own domain:
 
 I have my own domain arisanninga.nl which I  wanted to use for this project. On digital ocean I added my domain and made arisanninga.nl redirect to the droplets ip. On my provider I added the NS records. Now I don’t have to type the ip address of my droplet (or some other funny name).
 SSH into server with user instead of root
@@ -13,14 +13,14 @@ Then I wanted to have a user to ssh into my server instead of root. So I made th
 On the server I needed to be able to pull from github. So I installed a deploy key on my repository for this project and tested the connection. But with user anningast I still couldn’t pull from github or even see the git status. Therefore I made anningast (co) owner of the repo folder on the server. After this I was able to see the status and pull from my github repo from inside my server and I could ssh into the server with anningast instead of root. And when github actions ssh into the server, it can do stuff in the repo folder, but for sudo actions a password is still needed.
 
 
-##Github actions:
+## Github actions:
 
 
 At first I wanted 2 workflows, and when the first workflow succeeded, the second should be triggered. While this can be done, I found it too cumbersome. Instead I chose to put 2 jobs into one workflow. The problem was that I still couldn’t count on the first job also being processed first. The solution was to make the second job dependant of the first one. So the second job only fires when the first job has successfully finished.
 So I put two jobs into a workflow/yaml file. First job for the pytest and the second job for the deployment. The pytest job must succeed and then the second job for deployment is fired.
 
 
-##Github secrets:
+## Github secrets:
 
 
 I also didn’t want to get rid of the passphrase when using ssh to get into the server. So for the second job I made some secrets on github with my host, username and ssh key and passphrase. I needed those to ssh into my server. I used the action from appleboy/ssh-action to do this. This action uses secrets stored in my github.
