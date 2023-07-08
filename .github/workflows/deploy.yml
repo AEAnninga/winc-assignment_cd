@@ -33,6 +33,4 @@ jobs:
           script: |
             cd /home/flask_calculator_app/winc_assignment_cd
             git pull
-            killall gunicorn
-            gunicorn --bind 0.0.0.0 calculator:app
                   
