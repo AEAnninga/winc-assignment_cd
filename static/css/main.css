@@ -24,9 +24,20 @@ body {
 .calculations-row {
     display: flex;
     flex-flow: row nowrap;
-    justify-content: space-evenly;
-    width: 100vw;
-    height: 50px;
+    justify-content: space-between;
+    width: 50vw;
+    height: 25px;
+}
+
+.calculations-row div input {
+    height: 25px;
+}
+
+#calculate {
+    height: 25px;
+    background: rgb(144, 52, 144);
+    box-shadow: 0px 2px 4px purple;
+    color: whitesmoke;
 }
 
 #arithmetic-operator {
@@ -38,6 +49,7 @@ body {
 
 input {
     border-radius: 5px;
+    border: none;
 }
 
 
@@ -51,5 +63,5 @@ input {
     background: whitesmoke;
     border-radius: 5px;
     color: #6699cc;
-    box-shadow: 0px 0px 3px;
+    box-shadow: 1px 2px 3px 1px grey inset;
 }
