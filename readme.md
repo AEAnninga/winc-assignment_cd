@@ -1,5 +1,6 @@
 [![Run Tests and Deploy Flask App to VPS Digital Ocean](https://github.com/AEAnninga/winc_assignment_cd/actions/workflows/deploy.yml/badge.svg)](https://github.com/AEAnninga/winc_assignment_cd/actions/workflows/deploy.yml)
 
+
 # Flask calculator app overview
 
 The web application itself is very basic, because that wasn’t the scope of this assignment. Just some simple arithmetic calculations. Adding new kind of calculations with corresponding tests should be very straightforward.
