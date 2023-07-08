@@ -33,6 +33,6 @@ jobs:
           script: |
             cd /home/flask_calculator_app/winc_assignment_cd
             git pull
-            killall gunicorn
-            gunicorn --bind 0.0.0.0 calculator:app
+            echo {{ secrets.sudo }} | sudo -s killall gunicorn
+            echo {{ secrets.sudo }} | sudo -s gunicorn --bind 0.0.0.0 calculator:app
                   
