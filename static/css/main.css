@@ -24,8 +24,9 @@ body {
 .calculations-row {
     display: flex;
     flex-flow: row nowrap;
-    justify-content: space-between; 
-    width: 50%;
+    justify-content: space-evenly;
+
+    width: 100%;
     height: 50px;
 }
 
