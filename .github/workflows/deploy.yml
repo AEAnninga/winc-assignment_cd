@@ -30,6 +30,7 @@ jobs:
           host: ${{ secrets.FLASK_CALCULATOR_HOST }}
           username: ${{ secrets.FLASK_CALCULATOR_USER }}
           key: ${{ secrets.FLASK_CALCULATOR_KEY }}
+          port: ${{ secrets.FLASK_CALCULATOR_PORT }}
           script: |
             cd /home/flask_calculator_app/winc_assignment_cd
             git pull
