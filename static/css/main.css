@@ -38,7 +38,14 @@ body {
     background: rgb(144, 52, 144);
     box-shadow: 0px 2px 4px purple;
     color: whitesmoke;
+    cursor: pointer;
 }
+
+#calculate:hover {
+    background: rgb(228, 105, 228);
+    box-shadow: 2px 4px 6px purple;
+}
+
 
 #arithmetic-operator {
     width: 50px;
