@@ -35,4 +35,5 @@ jobs:
             cd /home/flask_calculator_app/winc_assignment_cd
             git pull
             sudo systemctl restart flask-calculator.service
+            systemctl status flask-calculator.service
                   
